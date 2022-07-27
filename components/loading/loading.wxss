@@ -1,0 +1,7 @@
+/* components/loading/loading.wxss */
+.load-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}

@@ -1,0 +1,36 @@
+/**app.wxss**/
+page {
+  --themeColor: #9cc2e4;
+  --themeColorHelp: #71a732;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+button {
+  background: initial;
+}
+button:focus{
+  outline: 0;
+}
+button::after{
+  border: none;
+}
+
+.hover-tap{
+  opacity: .8;
+}
+.hidden-1{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.hidden-4{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

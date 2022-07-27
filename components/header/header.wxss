@@ -1,0 +1,71 @@
+/* components/paster/paster.wxss */
+.paster-pop{
+  width: 100%;
+  height: 0rpx;
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1000;
+}
+.top-bar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.title{
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+  font-size: 35rpx;
+}
+.title-icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.scrollview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.scrollview-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 328px;
+  margin-bottom: 150px;
+}
+
+.scrollview-item {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 29.333px;
+  margin-left: 29.333px;
+}
+.blank{
+  width: 100%;
+  height: 150rpx;
+  text-align: center;
+  color: #ffffff;
+}

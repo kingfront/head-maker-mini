@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "paster": "/components/paster/paster",
+    "header": "/components/header/header",
+    "mask": "/components/mask/mask",
+    "loading": "/components/loading/loading"
+  }
+}

@@ -1,0 +1,22 @@
+<!--pages/poster/poster.wxml-->
+<view class="posterview">
+  <canvas class="posterview-canvas" canvas-id="festivalCanvas"></canvas>
+  <view class="poster-main">
+    <swiper bindchange="swiperChange" current="{{current}}" indicator-dots="{{false}}" circular="true" interval="false" duration="800"
+      previous-margin="20px" next-margin="40px">
+      <block wx:for="{{backImageUrls}}" wx:key="index">
+        <swiper-item>
+          <view class="posterview-imageview">
+            <image class="posterview-image" src="{{item.posterSrc || item.imgUrl}}" mode="widthFix"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="posterview-bottomview">
+      <view class="num-tip">{{backIndex+1}}/{{backImageUrls.length}}</view>
+      <view class="save-button-view">
+        <view bindtap="clickSavePhoto" hover-class="hover-tap" class="save-button-item">保存到相册</view>
+      </view>
+    </view>
+  </view>
+</view>

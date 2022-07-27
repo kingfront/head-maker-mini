@@ -1,0 +1,7 @@
+<!--components/mask/mask.wxml-->
+<view style="transform: scale({{show?1:0}});background: rgba(0, 0, 0, {{opacity}})" animation="{{animationMask}}" class="mask">
+  <slot></slot>
+  <view bindtap="closeMask" class="close">
+    <image src="../../images/icon/fail.png"></image>
+  </view>
+</view>

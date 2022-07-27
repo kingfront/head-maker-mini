@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/imgCut/imgCut",
+    "pages/poster/poster"
+  ],
+  "window": {
+    "backgroundColor": "#9cc2e4",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#9cc2e4",
+    "navigationBarTitleText": "小依助手",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

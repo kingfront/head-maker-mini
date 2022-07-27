@@ -1,0 +1,16 @@
+<!--components/paster/paster.wxml-->
+<view animation="{{animationIconPop}}" class="paster-pop">
+  <view class="top-bar">
+    <image bindtap="showPasterPop" class="title-icon" src="../../images/icon/fail.png"></image>
+    <view class="title">贴纸</view>
+    <image bindtap="showPasterPop" class="title-icon" src="../../images/icon/question.png"></image>
+  </view>
+  <scroll-view class="scrollview" scroll-y="true" enable-flex="true">
+    <view class="scrollview-view">
+      <view class="scrollview-item" wx:for="{{icons}}" wx:key="key" data-index="{{index}}" style="border: 1px dashed {{item.isselected ? '#fff' : 'rgb(0 0 0 / 0%)'}}; margin-right:{{(index + 1) % 4 == 0 ? 0 : 26.666}}px;" bindtap="clickFestivalImage">
+        <image src="{{item.src}}" mode="aspectFit" />
+      </view>
+      <view class="blank">{{icons.length>0?'':'加载中...'}}</view>
+    </view>
+  </scroll-view>
+</view>
