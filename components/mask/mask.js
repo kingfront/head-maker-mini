@@ -6,11 +6,7 @@ Component({
   properties: {
     show: {
       type: Boolean,
-      value: false,
-      observer: function () {
-        let newVal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-        console.log(newVal);
-      }
+      value: false
     },
     opacity: {
       type: String,

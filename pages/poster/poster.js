@@ -3,7 +3,6 @@
  * 海报生成页面
  */
 import ImageSynthesis from '../../utils/image-synthesis.js';
-import service from '../../utils/service.js';
 import { staticUrl } from '../../utils/config'
 
 const app = getApp();
@@ -234,10 +233,6 @@ Page({
           wx.showToast({
             title: '保存到相册成功',
           });
-          service.clickIcs({
-            title: '保存节日海报',
-            type: this.data.backIndex
-          })
         },
         fail: (res) => {
           this.data.loading = false;

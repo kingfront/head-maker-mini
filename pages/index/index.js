@@ -3,7 +3,6 @@
  * 制作头像 首页
  */
 import ImageSynthesis from '../../utils/image-synthesis.js';
-import Notification from '../../utils/react-whc-notification.js';
 
 Page({
   /**
@@ -39,6 +38,7 @@ Page({
     handFlg: false,
     sendTipFlg: false
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -55,6 +55,7 @@ Page({
       that.setData({ sendTipFlg: true })
     }, 60 * 1000);
   },
+
   /**
    * 展示贴纸弹框
    */
@@ -63,16 +64,25 @@ Page({
     paster.showPasterPop()
     this.setData({ handFlg: false })
   },
+
   // 选择贴纸icon
   choosePasterIcon: function (e) {
-    this.setData({
-      festivalSize: e.detail.size,
-      festivalSrc: e.detail.src
-    })
-    if (e.detail.size == 320) {
+    const { userInfo } = this.data
+    if (userInfo.highAvatarUrl) {
       this.setData({
-        festivalLeft: 0,
-        festivalTop: 0
+        festivalSize: e.detail.size,
+        festivalSrc: e.detail.src
+      })
+      if (e.detail.size == 320) {
+        this.setData({
+          festivalLeft: 0,
+          festivalTop: 0
+        })
+      }
+    } else {
+      wx.showToast({
+        icon: 'none',
+        title: '请先授权头像！',
       })
     }
   },
@@ -219,15 +229,16 @@ Page({
       rc.x = 0
       rc.y = 0
     }
-    console.log(rc);
-    imageSynthesis.addImage({
-      path: festivalSrc,
-      x: rc.x,
-      y: rc.y,
-      w: rc.w,
-      h: rc.h,
-      deg: rotate
-    });
+    if (festivalSrc) {
+      imageSynthesis.addImage({
+        path: festivalSrc,
+        x: rc.x,
+        y: rc.y,
+        w: rc.w,
+        h: rc.h,
+        deg: rotate
+      });
+    }
     imageSynthesis.startCompound((img) => {
       if (img != void 0) {
         wx.hideLoading();
@@ -306,25 +317,28 @@ Page({
           userInfo
         } = this.data;
         if (res.tempFilePaths.length > 0) {
-          Notification.addObserver(this, 'cutimagenotify', (img) => {
-            if (img != void 0) {
-              userInfo.highAvatarUrl = img;
-              userInfo.avatarUrl = img;
-              this.setData({
-                logoPath: null,
-                userInfo,
-                hasUserInfo: true,
-                handFlg: true
-              });
-            } else {
-              wx.showToast({
-                title: '请选择高清图像尺寸至少200x200以上！',
-                icon: 'none',
-              });
-            }
-          });
+          let that = this
           wx.navigateTo({
             url: `../imgCut/imgCut?imageurl=${res.tempFilePaths[0]}`,
+            events: {
+              reloadPage: function (img) {
+                if (img != void 0) {
+                  userInfo.highAvatarUrl = img;
+                  userInfo.avatarUrl = img;
+                  that.setData({
+                    logoPath: null,
+                    userInfo,
+                    hasUserInfo: true,
+                    handFlg: true
+                  });
+                } else {
+                  wx.showToast({
+                    title: '请选择高清图像尺寸至少200x200以上！',
+                    icon: 'none',
+                  });
+                }
+              }
+            }
           });
         } else {
           wx.showToast({

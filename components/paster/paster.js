@@ -7,11 +7,7 @@ Component({
   properties: {
     show: {
       type: Boolean,
-      value: false,
-      observer: function observer() {
-        let newVal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-        console.log(newVal);
-      }
+      value: false
     }
   },
 
@@ -28,6 +24,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    
     // 初始化icon
     makeInit: function () {
       let that = this
@@ -39,11 +36,11 @@ Component({
           'Content-Type': 'application/json'
         },
         success: function (res) {
-          console.log(res);
           that.setData({ icons: res.data })
         }
       })
     },
+
     // 点击icon
     clickFestivalImage: function (e) {
       const index = e.currentTarget.dataset.index;
@@ -59,6 +56,7 @@ Component({
       
       this.triggerEvent('chooseIcon',icons[index]);
     },
+
     // 展示贴纸浮框
     showPasterPop: function () {
       var animation = wx.createAnimation({

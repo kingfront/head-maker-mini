@@ -3,8 +3,8 @@
  * 图片裁剪页面
  */
 import ImageSynthesis from '../../utils/image-synthesis.js';
-import Notification from '../../utils/react-whc-notification.js';
 const app = getApp();
+
 Page({
   data: {
     imageurl: null,
@@ -60,8 +60,9 @@ Page({
         src: imageurl,
         success: (res) => {
           if (Math.min(res.width, res.height) < 200) {
+            const eventChannel = this.getOpenerEventChannel()
+            eventChannel.emit('reloadPage',null);
             wx.navigateBack();
-            Notification.post('cutimagenotify', null);
           } else {
             const isvol = res.height >= res.width;
             this.setData({
@@ -118,7 +119,8 @@ Page({
     }, (img) => {
       wx.hideLoading();
       if (img != void 0) {
-        Notification.post('cutimagenotify', img);
+        const eventChannel = this.getOpenerEventChannel()
+        eventChannel.emit('reloadPage',img);
         wx.navigateBack();
       }else {
         this.data.loading = false;

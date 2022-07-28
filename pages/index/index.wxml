@@ -26,17 +26,20 @@
     </block>
   </view>
   <view class="bar">
-    <view bindtap="clickIconPop" class="button" hover-class="hover-tap">贴纸
+    <view bindtap="clickIconPop" class="button" hover-class="hover-tap">头像贴纸
       <image wx:if="{{handFlg}}" class="hand-icon" src="../../images/icon/hand-icon.png"></image>
     </view>
-    <view bindtap="clickMakeNewImage" class="button" hover-class="hover-tap">预览</view>
-  </view>
+    <view bindtap="clickHeaderPop" class="button" hover-class="hover-tap">卡通头像
+    </view>  </view>
   <view class="bar">
     <view bindtap="douyinUp" class="button douyin" hover-class="hover-tap">抖音头像
       <view class="new-tag">热</view>
     </view>
     <view bindtap="makePoster" class="button" hover-class="hover-tap">节日海报
     </view>
+  </view>
+  <view class="bar bar-show">
+    <view bindtap="clickMakeNewImage" class="button" hover-class="hover-tap">预览</view>
   </view>
   <paster id="paster" bindchooseIcon="choosePasterIcon"></paster>
   <header id="header" bindchooseIcon="chooseHeaderIcon"></header>

@@ -1,8 +1,3 @@
-/*
- * @Author: whc
- * @Date: 2019-12-13 17:46:59
- * @LastEditTime : 2020-01-05 15:16:46
- */
 export default class ImageSynthesis {
   constructor(
     view, 
@@ -29,11 +24,8 @@ export default class ImageSynthesis {
     const {
       _size
     } = this;
-    // const res = wx.getSystemInfoSync();
-    // const xc = (res.screenWidth - 320) / 2.0;
     return {
       x: x * (_size.w / sw),
-      // x: (x - xc) * (_size.w / sw),
       y: y * (_size.h / sh),
       w: w * (_size.w / sw),
       h: h * (_size.h / sh),
