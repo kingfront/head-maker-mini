@@ -1,14 +1,15 @@
 <p align="center">
     <img alt="logo" src="https://freely.vercel.app/favicon.ico" width="120" height="120" style="margin-bottom: 10px;">
 </p>
-<h1 align="center">小依助手 头像制作</h1>
+<h1 align="center">小依助手 微信换头像</h1>
 
 <p align="center">制作微信头像、抖音头像、中国红国旗、头像海报等</p>
 
 <p align="center">
 🔥 <a target="_blank" href="./images/icon/mini.png">在线 访问</a>
 &nbsp;
-🌈 <a target="_blank" href="https://juejin.cn/post/7070402652948922381">文档</a>
+🌈 <a target="_blank" href="https://juejin.cn/post/7125666749894098981/">文档</a>
+
 </p>
 
 ## 功能
