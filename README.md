@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="logo" src="https://freely.vercel.app/favicon.ico" width="120" height="120" style="margin-bottom: 10px;">
+    <img alt="logo" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bd5b3ac496ee4904bec64e2c60569742~tplv-k3u1fbpfcp-watermark.image" width="120" height="120" style="margin-bottom: 10px;">
 </p>
 <h1 align="center">小依助手 微信换头像</h1>
 
@@ -11,6 +11,17 @@
 🌈 <a target="_blank" href="https://juejin.cn/post/7125666749894098981/">文档</a>
 
 </p>
+
+## 示例图
+<table>
+    <tr>
+        <td ><center><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b3ff3de6b8f41aa9b82846e25da39b2~tplv-k3u1fbpfcp-watermark.image" width="100px" ></center></td>
+        <td ><center><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b077f70f7f3c4574840fb8e1eeedef7f~tplv-k3u1fbpfcp-watermark.image" width="100px"></center></td>
+        <td ><center><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bf46428bd4254e25be4b5b2ec44390b6~tplv-k3u1fbpfcp-watermark.image" width="100px"></center></td>
+        <td ><center><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8d9ad5c564114c878d17758352943546~tplv-k3u1fbpfcp-watermark.image" width="100px"></center></td>
+        <td ><center><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/77aee1fa60fe49b29829253041d72cbc~tplv-k3u1fbpfcp-watermark.image" width="100px"></center></td>
+    </tr>
+</table>
 
 ## 功能
 
